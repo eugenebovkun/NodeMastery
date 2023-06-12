@@ -1,0 +1,19 @@
+<%- include('includes/head.ejs') %>
+
+<body>
+    <%- include('includes/nav.ejs') %>
+
+    <main>
+        <% if (users.length > 0) { %>
+            <h2>Users:</h2>
+            <ul>
+                <% for(const user of users) { %>
+                    <li><%= user.name %></li>
+                <% }%>
+            </ul>
+        <% } else { %>
+            <h1> There isn't any user yet. <a href="/">Creat new user</a></h1>
+        <% }%>
+    </main>
+
+</body>
